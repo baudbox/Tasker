@@ -7,4 +7,4 @@
 -----------------------------------------------------------------------
 **You can check my android app developed with Tasker on**
 
-[![N|DutyManager](https://apps.baudbox.fr/images/Get_it_on_Google_play.png)](https://play.google.com/store/apps/details?id=fr.baudbox.apps.dutymanager)
+[![N|DutyManager](https://upload.wikimedia.org/wikipedia/commons/c/cd/Get_it_on_Google_play.svg)](https://play.google.com/store/apps/details?id=fr.baudbox.apps.dutymanager)
