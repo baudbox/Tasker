@@ -2,8 +2,7 @@
 
 ### Collection of my Tasker Projects/Profiles/Tasks
 
-- ##### **[Test_Accessibility.tsk.xml](https://github.com/baudbox/Tasker/blob/master/Tasks/Test_Accessibility.tsk.xml)**
-Test accessibilty settings against a package name
+- **[Test_Accessibility.tsk.xml](https://github.com/baudbox/Tasker/blob/master/Tasks/Test_Accessibility.tsk.xml)** > Test accessibilty settings against a package name
 
 -----------------------------------------------------------------------
 **You can check my android app developed with Tasker on**
