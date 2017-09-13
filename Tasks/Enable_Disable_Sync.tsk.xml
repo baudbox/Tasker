@@ -1,0 +1,197 @@
+<TaskerData sr="" dvi="1" tv="5.0u6m">
+	<Task sr="task123">
+		<cdate>1421152249368</cdate>
+		<edate>1505317582511</edate>
+		<id>123</id>
+		<nme>Git - Enable Disable Sync</nme>
+		<pri>1006</pri>
+		<Action sr="act0" ve="7">
+			<code>300</code>
+			<label>Example:
+&lt;br&gt;
+%par1: mymail@gmail.com|com.google|1
+&lt;br&gt;
+%par2: gmail-ls,com.android.calendar,com.android.contacts</label>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>Replace with mail address 
+
+Replace 1 to 0 in order to activate or deactivate the sync</label>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Str sr="arg1" ve="3">xxxxxxxxx@gmail.com|com.google|1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%auth</Str>
+			<Str sr="arg1" ve="3">,</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%item</Str>
+			<Str sr="arg1" ve="3">1:%auth(#)</Str>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">set %auth(%item) to %sync</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sync</lhs>
+					<op>2</op>
+					<rhs>1</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>664</code>
+			<label>make sure it shows up in the accounts screen</label>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%sync</Str>
+			<Str sr="arg1" ve="3">ContentResolver</Str>
+			<Str sr="arg2" ve="3">setIsSyncable
+{} (Account, String, int)</Str>
+			<Str sr="arg3" ve="3">myaccount</Str>
+			<Str sr="arg4" ve="3">%auth(%item)</Str>
+			<Str sr="arg5" ve="3">1</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>664</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%sync</Str>
+			<Str sr="arg1" ve="3">ContentResolver</Str>
+			<Str sr="arg2" ve="3">setSyncAutomatically
+{} (Account, String, boolean)</Str>
+			<Str sr="arg3" ve="3">myaccount</Str>
+			<Str sr="arg4" ve="3">%auth(%item)</Str>
+			<Str sr="arg5" ve="3">true</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>664</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%sync</Str>
+			<Str sr="arg1" ve="3">ContentResolver</Str>
+			<Str sr="arg2" ve="3">setSyncAutomatically
+{} (Account, String, boolean)</Str>
+			<Str sr="arg3" ve="3">myaccount</Str>
+			<Str sr="arg4" ve="3">%auth(%item)</Str>
+			<Str sr="arg5" ve="3">false</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<label>Gmail, Calendar, Contacts, Contacts detailed</label>
+			<Str sr="arg0" ve="3">%par2</Str>
+			<Str sr="arg1" ve="3">gmail-ls,com.android.calendar,com.android.contacts,com.google.android.gms.people</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%par2</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Str sr="arg1" ve="3">|</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>547</code>
+			<label>from AccountManager</label>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">%par11</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>547</code>
+			<label>from AccountManager or SyncAdapterType</label>
+			<Str sr="arg0" ve="3">%type</Str>
+			<Str sr="arg1" ve="3">%par12</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>547</code>
+			<label>1 or 0</label>
+			<Str sr="arg0" ve="3">%sync</Str>
+			<Str sr="arg1" ve="3">%par13</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>547</code>
+			<label>from SyncAdapterType</label>
+			<Str sr="arg0" ve="3">%auth</Str>
+			<Str sr="arg1" ve="3">%par2</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>664</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">myaccount</Str>
+			<Str sr="arg1" ve="3">Account</Str>
+			<Str sr="arg2" ve="3">new
+{Account} (String, String)</Str>
+			<Str sr="arg3" ve="3">%name</Str>
+			<Str sr="arg4" ve="3">%type</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>hd_av_repeat</nme>
+		</Img>
+	</Task>
+</TaskerData>
